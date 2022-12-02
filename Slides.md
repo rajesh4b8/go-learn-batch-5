@@ -99,3 +99,29 @@
 [Git cheatsheet 1](https://training.github.com/downloads/github-git-cheat-sheet)
 
 [Git cheatsheet 2](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)
+
+## Day 4
+
+### Scopes
+
+- Local variable vs global variable
+
+### Exporting / exposing / public members from package
+
+- Just start the name with a Upper case!!
+- Variables / functiontions with upper case starting will exported outside the package!
+
+### Functions
+
+- Go supports first class functions
+- different ways of creating and using the functions in examples
+
+### Flow control statements
+
+- if / else
+- for
+
+### Assignment-3
+
+- Print fibanacci series -> 0, 1, 1, 2, 3, 5, 8, 11 so on!
+- Input is the number of elements
