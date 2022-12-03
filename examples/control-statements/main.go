@@ -18,4 +18,18 @@ func main() {
 			fmt.Println(i, "is odd")
 		}
 	}
+
+	suits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
+	for i, suit := range suits {
+		fmt.Println(i, suit)
+	}
+
+	for i := range suits {
+		fmt.Println(i)
+	}
+
+	// `_` is the blank reference
+	for _, suit := range suits {
+		fmt.Println(suit)
+	}
 }

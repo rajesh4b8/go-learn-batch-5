@@ -125,3 +125,23 @@
 
 - Print fibanacci series -> 0, 1, 1, 2, 3, 5, 8, 11 so on!
 - Input is the number of elements
+
+## Day 5
+
+### Use Case Playing cards
+
+- Deck of cards functionality
+  - New Deck
+  - Print Deck
+  - Shuffle
+  - Deal
+  - Save to file
+  - Read from file
+
+### Arrays / Slices
+
+- Array is a data structure to maintain a list of similar types
+
+### Assignment-4
+
+- Shuffle the deck of cards
