@@ -21,6 +21,7 @@ func CreateNewDeck() []string {
 	return Shuffle(newDeck)
 }
 
+// using rand package to generate random index
 func Shuffle(deck []string) []string {
 	rand.Seed(time.Now().UnixNano())
 	for index := range deck {
