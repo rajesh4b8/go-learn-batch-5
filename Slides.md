@@ -145,3 +145,14 @@
 ### Assignment-4
 
 - Shuffle the deck of cards
+
+## Day 6
+
+### Functions / Methods
+
+- Functions are called with package name / directly inside the same package
+- Methods have a reciever arg, can be only called with the receiver
+
+### Assignment-5
+
+- Read the deck from file
