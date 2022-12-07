@@ -3,6 +3,12 @@
 ## Day 1
 
 - Intro
+- Topics to be covered
+- Why Go?
+- History
+- Go playground
+- Hello world example
+- Hello web example
 
 ## Day 2
 
@@ -138,9 +144,15 @@
   - Save to file
   - Read from file
 
-### Arrays / Slices
+### Slices / Arrays
 
 - Array is a data structure to maintain a list of similar types
+- Length is fixed for arrays in Go
+- Index starts from 0
+- how to create an array?
+- Slices are reference data types which points to underlying array
+- Array is a value data type
+- Slice is Reference data type
 
 ### Assignment-4
 
@@ -148,11 +160,42 @@
 
 ## Day 6
 
+### Type conversions
+
+- For converting compatible types you just use `new_type(old_value)`
+
 ### Functions / Methods
 
 - Functions are called with package name / directly inside the same package
 - Methods have a reciever arg, can be only called with the receiver
 
+### Use case - Write to file, Print
+
 ### Assignment-5
 
 - Read the deck from file
+
+## Day 7
+
+### Structs
+
+- What is Struct?
+- Definining struct
+- Declaration / Initialization
+- Embdedded structs
+- functions / methods (Reciver arg)
+
+### Pass by value
+
+- Go -> calling a function or method -> args -> pass by value
+
+### Value Types / Reference Types
+
+| Value Type       | Referece Type |
+| ---------------- | ------------- |
+| int              | slices        |
+| float            | maps          |
+| string           | channels      |
+| bool             | pointers      |
+| structs          | functions     |
+| arrays           |      |
