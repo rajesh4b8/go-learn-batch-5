@@ -199,3 +199,31 @@
 | bool             | pointers      |
 | structs          | functions     |
 | arrays           |      |
+
+## Day 8
+
+### Maps
+
+- Map is a data structure -> A list of key / value pairs
+- All keys should be of same type
+- All the values should be of same type
+
+| Map                 | Struct               |
+|-------------------- |----------------------|
+| All keys - same type| different types      |
+| related properties  | represent something    |
+| All values - same type|can be different |
+| keys - can be added | Define them at compile time |
+| keys are indexed   | keys not indexed |
+| Reference Type     | Value Type |
+
+### Pointers
+
+- User `&` to access the pointer (address)
+- Use `*` to access the value from pointer
+- User `*` infornt of a type (ex: person) to indiate it's a pointer type
+- Pointer indirection
+
+### Assignment-6
+
+- Do the fib serires by using recursion
