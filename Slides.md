@@ -227,3 +227,27 @@
 ### Assignment-6
 
 - Do the fib serires by using recursion
+
+## Day 9
+
+### Interfaces
+
+- Function over loading is not allowed in go -> You can't have same func with same name
+- What is the interface in OOP?
+  An interface defines the behavior of an object. It only specifies what the object is supposed to do. It is actually a concept of abstraction and encapsulation
+- To implement an interface
+  - No need to explicitly metntion that it implements
+  - No need to use any keywords such as `implments` or `extends`
+  - You must honor and implement all the methods in that interface to implement any interface!
+  - All the structs in the file automcatically be the memembers of that interface defined
+    - As the memebers of the interface, you must implement all the methods!
+
+### Assignment-7
+
+- Add a new income stream of Type `Advertisement`
+  - Properties:
+    - AddName
+    - NoOfClick
+    - ClickRate
+  - Make sure it's implmenting the interface
+
