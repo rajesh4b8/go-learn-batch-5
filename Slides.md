@@ -251,3 +251,18 @@
     - ClickRate
   - Make sure it's implmenting the interface
 
+
+## Day 10
+
+### Empty structs
+
+- Empty structs take 0 memory
+- Empty structs always points to the same location (address)
+- Useful to define methods for a service
+
+### Use Case - Users API
+
+- Create User
+- Read / List Users
+- Update User
+- Delete User

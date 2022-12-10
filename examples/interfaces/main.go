@@ -12,6 +12,10 @@ type Income interface {
 type FixedBilling struct {
 	projectName string
 	bidAmount   int
+
+	// methods
+	// calculateIncome()
+	// source()
 }
 
 // implementing the first method `calculateIncome` of `Income` interface
@@ -28,6 +32,23 @@ type TimeAndMaterial struct {
 	projectName string
 	noOfHours   int
 	hourlyRate  int
+
+	// methods
+	// calculateIncome() string
+	// source() int
+	// noOfHours() int
+}
+
+func (p TimeAndMaterial) calculateIncome() int {
+	return p.hourlyRate * p.noOfHours
+}
+
+func (p TimeAndMaterial) source() string {
+	return p.projectName
+}
+
+func (p TimeAndMaterial) getNoOfHours() int {
+	return p.noOfHours
 }
 
 // Advertisement income
@@ -36,18 +57,10 @@ func main() {
 	p1 := FixedBilling{"prj 1", 20000}
 	p2 := TimeAndMaterial{"prj 2", 100, 40}
 	p3 := TimeAndMaterial{"prj 3", 2000, 25}
+	fmt.Println("no of hours for p3", p3.getNoOfHours())
 
 	fmt.Println(p1, p2)
 	fmt.Println("Total income", calculateNetIncome([]Income{p1, p2, p3}))
-}
-
-// function over loading is not allowed in go
-func (p TimeAndMaterial) calculateIncome() int {
-	return p.hourlyRate * p.noOfHours
-}
-
-func (p TimeAndMaterial) source() string {
-	return p.projectName
 }
 
 func calculateNetIncome(steams []Income) int {
