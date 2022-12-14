@@ -1,6 +1,7 @@
 package deck
 
 import (
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -50,7 +51,13 @@ func Deal(d Deck, handSize int) (Deck, Deck) {
 	return d[:handSize], d[handSize:]
 }
 
-func (d Deck) WriteToFile(fileName string) {
+func (d Deck) WriteToFile(fileName string) error {
+	if len(fileName) == 0 {
+		return errors.New("fileName can't be empty")
+	} else if !strings.Contains(fileName, ".") {
+		return errors.New("fileName should be with a `.` for proper extn")
+	}
+
 	str := strings.Join(d, ",")
 	content := []byte(str)
 
@@ -59,6 +66,8 @@ func (d Deck) WriteToFile(fileName string) {
 		log.Fatal("Error writiting to a file", err)
 		os.Exit(1)
 	}
+
+	return nil
 }
 
 func ReadFromFile(fileName string) Deck {

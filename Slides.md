@@ -266,3 +266,18 @@
 - Read / List Users
 - Update User
 - Delete User
+
+## Day 11
+
+### Recap
+
+### Unit tests
+
+- Unit test is testing a piece of code with different use cases
+- A good unit covers both postive and negative test cases
+- Code Coverage: line coverage / branch coverage
+- CICD tools -> builds will fail with not enough code coverage
+
+### Assignment-8
+
+- Complete the unit tests for all the functionality in deck
