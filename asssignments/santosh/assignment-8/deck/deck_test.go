@@ -113,13 +113,21 @@ func TestWriteToFile(t *testing.T) {
 // case 1: empty file
 // case 2: wrong file name
 func TestReadFile(t *testing.T) {
-	err := ReadFile("")
-	if err == nil {
-		t.Error("Expected error: filename cannot be empty")
+	// Positve cases
+	_, err := ReadFile("../DealCards.txt")
+	if err != nil {
+		t.Error("Expected file is found with name")
 	}
 
-	err1 := ReadFile("abc.txt")
-	if err1 == nil {
+	// Negative  cases
+	_, err2 := ReadFile("abc.txt")
+	log.Println(err2)
+	if err2 != nil {
+		t.Error("Expected error: filename is not found with abc.txt")
+	}
+
+	_, err1 := ReadFile("")
+	if err1 != nil {
 		t.Error("Expected error: filename cannot be empty")
 	}
 
@@ -128,6 +136,13 @@ func TestReadFile(t *testing.T) {
 // deal function
 func TestDeal(t *testing.T) {
 	deck := CreateNewDeck()
-	Deal(deck, -2)
-	Deal(deck, 16)
+	_, _, err := Deal(deck, -2)
+	if err != nil {
+		t.Error("Handsize cannot be more than 16")
+	}
+	_, _, err1 := Deal(deck, 16)
+	if err1 != nil {
+		t.Error("Handsize cannot be less than or equal to 0")
+	}
+
 }

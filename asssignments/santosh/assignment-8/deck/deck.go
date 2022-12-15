@@ -55,23 +55,24 @@ func (d Deck) Print() {
 	}
 }
 
-func Deal(d Deck, handSize int) (Deck, Deck) {
+func Deal(d Deck, handSize int) (Deck, Deck, error) {
+
 	if handSize >= 16 {
-		log.Println("Handsize cannot be more than 16")
-		os.Exit(1)
+		//log.Println("Handsize cannot be more than 16")
+		return d, d, errors.New("Handsize cannot be more than 16")
 	}
 	if handSize <= 0 {
-		log.Println("Handsize cannot be less than or equal to 0")
-		os.Exit(1)
+		//log.Println("Handsize cannot be less than or equal to 0")
+		return d, d, errors.New("Handsize cannot be less than or equal to 0")
 	}
-	return d[:handSize], d[handSize:]
+	return d[:handSize], d[handSize:], nil
 }
 
 func (d Deck) WriteToFile(fileName string) error {
 	if len(fileName) == 0 {
 		return errors.New("fileName can't be empty")
 	} else if !strings.Contains(fileName, ".") {
-		return errors.New("fileName should be with a `.` for proper extn")
+		return errors.New("fileName should be with a . for proper extn")
 	}
 
 	str := strings.Join(d, ",")
@@ -86,25 +87,31 @@ func (d Deck) WriteToFile(fileName string) error {
 	return nil
 }
 
-func ReadFile(fileName string) (d Deck) {
+func ReadFile(fileName string) (d Deck, err error) {
+	log.Println(fileName)
 	if len(fileName) == 0 {
-		log.Println("Error in reading file: File name cannot be empty")
-		os.Exit(1)
+		//log.Println("Error in reading file: File name cannot be empty")
+		var emptyDeck Deck
+		return emptyDeck, errors.New("Error in reading file: File name cannot be empty")
 	} else if !strings.Contains(fileName, ".") {
-		log.Println("Error in reading file: file name should have extention ")
-		os.Exit(1)
+		//log.Println("Error in reading file: file name should have extention ")
+		var emptyDeck Deck
+		return emptyDeck, errors.New("Error in reading file: file name should have extention")
 	}
 
 	content, err := ioutil.ReadFile(fileName)
+	log.Println("err", err)
+	//fmt.Println("err", err)
 	if err != nil {
-		log.Println("Error in reading file ", err)
-		os.Exit(1)
+		//log.Println("Error in reading file : ", err)
+		var emptyDeck Deck
+		return emptyDeck, err
 	}
 
 	//fmt.Println("File content is ", string(content))
 	deck := strings.Split(string(content), ",")
 	//fmt.Println(deck, len(deck), cap(deck))
-	return deck
+	return deck, err
 
 }
 
