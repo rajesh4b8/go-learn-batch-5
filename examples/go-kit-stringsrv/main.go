@@ -77,6 +77,8 @@ func main() {
 	svc := stringService{}
 	uppercaseHandler := httptransport.NewServer(makeUppercaseEndpoint(svc), decodeRequest, encodeResponse)
 	countHandler := httptransport.NewServer(makeCountEndpoint(svc), decodeRequest, encodeResponse)
+
+	// API handlers
 	http.Handle("/uppercase", uppercaseHandler)
 	http.Handle("/count", countHandler)
 
