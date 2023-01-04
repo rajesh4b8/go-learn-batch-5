@@ -281,3 +281,37 @@
 ### Assignment-8
 
 - Complete the unit tests for all the functionality in deck
+
+## Day 12
+
+### GOPATH / GOROOT
+
+- GOROOT is a variable that defines where your Go SDK is located. You do not need to change this variable, unless you plan to use different Go versions.
+- GOPATH is a variable that defines the root of your workspace. By default, the workspace directory is a directory that is named go within your user home directory (~/go for Linux and MacOS, %USERPROFILE%/go for Windows). GOPATH stores your code base and all the files that are necessary for your development. You can use another directory as your workspace by configuring GOPATH for different scopes. GOPATH is the root of your workspace and contains the following folders:
+  - src/: location of Go source code (for example, .go, .c, .g, .s).
+  - pkg/: location of compiled package code (for example, .a).
+  - bin/: location of compiled executable programs built by Go.
+
+### MVC Architecture
+
+- MVC is abbreviated as Model View Controller is a design pattern created for developing applications specifically web applications. As the name suggests, it has three major parts. The traditional software design pattern works in an "Input - Process - Output" pattern whereas MVC works as "Controller -Model - View" approach
+
+### RESTFul web services
+
+- RESTful web services are built to work best on the Web. Representational State Transfer (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as performance, scalability, and modifiability, that enable services to work best on the Web.
+- To communicate over web with http protocol
+- Different http methods
+  - GET
+  - POST
+  - PUT
+  - PATCH
+  - DELETE
+
+## Day 13+
+
+### GoRoutines / Channels
+
+- Goroutine: A goroutine is a function that executes simultaneously with other goroutines in a program and are lightweight threads managed by Go.
+- Whenever a go program starts running -> main goroutine
+
+### Concurrency Vs Parallelism
