@@ -314,5 +314,4 @@
 - Goroutine: A goroutine is a function that executes simultaneously with other goroutines in a program and are lightweight threads managed by Go.
 - Whenever a go program starts running -> main goroutine
 
-
 ### Concurrency Vs Parallelism
